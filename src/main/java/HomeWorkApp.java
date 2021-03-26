@@ -1,10 +1,16 @@
+import java.util.Scanner;
+
 public class HomeWorkApp {
 
     public static void main(String[] args) {
         printThreeWords();
-        checkSumSign();
-        printColor();
-        compareNumbers();
+        Scanner in = new Scanner(System.in);
+        int a = in.nextInt();
+        int b = in.nextInt();
+        int value = in.nextInt();
+        checkSumSign(a,b);
+        printColor(value);
+        compareNumbers(a,b);
     }
 
     static void printThreeWords() {
@@ -13,9 +19,7 @@ public class HomeWorkApp {
         System.out.println("Apple");
     }
 
-    static void checkSumSign() {
-        int a = 7;
-        int b = -6;
+    static void checkSumSign(int a, int b) {
         int c = a + b;
         if (c >= 0) {
             System.out.println("Сумма положительная");
@@ -24,8 +28,7 @@ public class HomeWorkApp {
         }
     }
 
-    static void printColor() {
-        int value = -20;
+    static void printColor(int value) {
         if (value > 100) {
             System.out.println("Зеленый");
         }
@@ -37,9 +40,7 @@ public class HomeWorkApp {
         }
     }
 
-    static void compareNumbers() {
-        int a = 7;
-        int b = -6;
+    static void compareNumbers(int a, int b) {
         if (a >= b) {
             System.out.println("a >= b");
         } else {
